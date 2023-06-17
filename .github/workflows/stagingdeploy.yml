@@ -7,7 +7,7 @@ env:
   AZURE_WEBAPP_NAME: partsunlimited1web   # replace suffix
   AZURE_WEBAPP_PACKAGE_PATH: '.'
   DEPLOYMENT_SLOT: staging
-  DOTNET_VERSION: '6'
+  DOTNET_VERSION: '3.1'
   AZURE_RESOURCEGROUP_NAME: partsunlimited1  # replace suffix  
   
 jobs:
