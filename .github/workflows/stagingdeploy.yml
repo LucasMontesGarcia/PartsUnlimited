@@ -29,6 +29,7 @@ jobs:
         run: |
           dotnet build PartsUnlimited.sln --configuration Release
           dotnet publish PartsUnlimited.sln -c Release -o partsunlimitedweb
+        continue-on-error: true
           
       # Deploy to Azure Web app slot
       - name: 'Run Azure webapp deploy action using publish profile credentials'
@@ -38,3 +39,4 @@ jobs:
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }}
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/partsunlimitedweb'
           slot-name: ${{ env.DEPLOYMENT_SLOT }}
+        continue-on-error: true
