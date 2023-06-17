@@ -7,12 +7,12 @@ env:
   AZURE_WEBAPP_NAME: partsunlimited1web   # replace suffix
   AZURE_WEBAPP_PACKAGE_PATH: '.'
   DEPLOYMENT_SLOT: staging
-  DOTNET_VERSION: '3.1'
+  DOTNET_VERSION: '6'
   AZURE_RESOURCEGROUP_NAME: partsunlimited1  # replace suffix  
   
 jobs:
   build-and-deploy:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
 
       # Checkout the repo
