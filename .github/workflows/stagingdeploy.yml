@@ -1,3 +1,4 @@
+
 name: Build and deploy app
 
 on:
@@ -12,7 +13,8 @@ env:
   
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: windows-2019
+    working-directory: ./
     steps:
 
       # Checkout the repo
@@ -27,7 +29,6 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
-          dotnet restore
           dotnet build PartsUnlimited.sln --configuration Release
           dotnet publish PartsUnlimited.sln -c Release -o partsunlimitedweb
           
