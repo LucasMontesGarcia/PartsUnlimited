@@ -27,6 +27,7 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
+          dotnet restore
           dotnet build PartsUnlimited.sln --configuration Release
           dotnet publish PartsUnlimited.sln -c Release -o partsunlimitedweb
           
